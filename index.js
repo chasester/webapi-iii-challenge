@@ -1,8 +1,12 @@
+require('dotenv').config();
+
+
+
 // code away!
 // implement your API here
 const express = require('express'); // built in node.js module to handle http traffic
-const hostname = '127.0.0.1'; // the local computer where the server is running
-const port = 3000; // a port we'll use to watch for traffic
+const hostname = 'localhost'; // the local computer where the server is running
+const port = process.env.PORT || 5000; // a port we'll use to watch for traffic
 const server = express();
 const postsRoutes = require('./posts/postRouter');
 const usersRoutes = require('./users/userRouter');
