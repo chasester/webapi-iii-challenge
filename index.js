@@ -16,7 +16,7 @@ server.use(express.json());
 server.use('/api/posts', postsRoutes);
 server.use('/api/users', usersRoutes);
 
-server.use('/', (req, res) => { res.send('api is up and running')});
+server.use('/', (req, res) => { res.send(`api is up and running <br/>${process.env.MOTD}`)});
 
 server.listen(port, () => {
     // start watching for connections on the port specified
